@@ -387,7 +387,7 @@ export default function App() {
             <img src={CHELSEA_CREST} alt="Chelsea FC" className="logo-img" />
             <span className="logo-text">Chelsea <span className="logo-accent">FC</span></span>
           </button>
-          <nav className={`nav-tabs ${menuOpen ? 'open' : ''}`}>
+          <nav className="nav-tabs desktop-nav">
             {navItems.map(n => (
               <button key={n.id} className={`nav-tab ${tab === n.id ? 'active' : ''}`} onClick={() => switchTab(n.id)}>{n.label}</button>
             ))}
@@ -405,6 +405,23 @@ export default function App() {
           </div>
         )}
       </header>
+
+      {/* MOBILE MENU — outside navbar to avoid stacking context issues */}
+      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-header">
+          <button className="nav-logo" onClick={() => switchTab('home')}>
+            <img src={CHELSEA_CREST} alt="Chelsea FC" className="logo-img" />
+            <span className="logo-text">Chelsea <span className="logo-accent">FC</span></span>
+          </button>
+          <button className="mobile-close" onClick={() => setMenuOpen(false)}><CloseIcon /></button>
+        </div>
+        <nav className="mobile-menu-nav">
+          {navItems.map(n => (
+            <button key={n.id} className={`mobile-menu-item ${tab === n.id ? 'active' : ''}`} onClick={() => switchTab(n.id)}>{n.label}</button>
+          ))}
+          <a href="https://store.chelseafc.com" target="_blank" rel="noreferrer" className="mobile-menu-item ext">Shop <ExternalIcon /></a>
+        </nav>
+      </div>
 
       {/* HERO - compact, always visible */}
       <section className="hero">
