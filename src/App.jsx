@@ -7,21 +7,22 @@ import ScorePredictor from './components/ScorePredictor'
 const CHELSEA_CREST = 'https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg'
 
 // ===== Icons =====
-const SearchIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-const CloseIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-const MenuIcon = () => <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-const ArrowRight = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-const ChevronLeft = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m15 18-6-6 6-6"/></svg>
-const ChevronRight = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m9 18 6-6-6-6"/></svg>
-const MapPin = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-const PlayBtn = () => <svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-const PlaySmall = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="#034694"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+const SearchIcon = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+const CloseIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+const ChevronLeft = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m15 18-6-6 6-6"/></svg>
+const ChevronRight = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"/></svg>
+const MapPin = () => <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+const PlayIcon = () => <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+const SmallPlayIcon = () => <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+const ArrowRight = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"/></svg>
+const TicketIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+const ExternalIcon = () => <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
 
 // ===== DATA =====
 const heroSlides = [
-  { tag: "Men's Team", title: 'Rosenior updates on Cucurella and highlights decisions that cost us', img: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600&q=80' },
-  { tag: "Women's Team", title: 'Girma proud of how Chelsea stuck together through a tough period', img: 'https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=1600&q=80' },
-  { tag: 'Fan Zone', title: 'Test Your Blues Knowledge in the Fan Games Zone', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80', internal: true },
+  { tag: "Latest Result", title: 'Chelsea 2-2 Leeds United', desc: 'Joao Pedro on the stalemate: "We are very frustrated"', link: 'https://www.chelseafc.com/en/news/article/joao-pedro-on-leeds-stalemate-we-are-very-frustrated', img: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600&q=80' },
+  { tag: "Women's Team", title: 'Girma: We Stuck Together', desc: 'Naomi Girma proud of how Chelsea stuck together - Blues defeat Spurs 2-0', link: 'https://www.chelseafc.com/en/news/article/girma-proud-of-how-chelsea-stuck-together-through-a-tough-period', img: 'https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=1600&q=80' },
+  { tag: 'Fan Zone', title: 'Test Your Blues Knowledge', desc: 'Play trivia, memory games, and more in our interactive Fan Games Zone!', link: '#', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80', internal: true },
 ]
 
 const stats = [
@@ -44,34 +45,29 @@ const matchesData = {
   ],
 }
 
-const newsItems = [
-  { tag: "Men's Team", title: 'Chelsea vs Leeds United', desc: 'Why are Chelsea and Leeds United rivals?', time: '10 Feb 26', img: 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=800&q=80', featured: true },
-  { tag: 'Video', title: 'Chelsea vs Leeds', time: '12 Feb 26', img: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&q=80', video: true },
-  { tag: "Men's Team", title: 'Joao Pedro on Leeds stalemate: "We are very frustrated"', time: '3 hours ago', img: 'https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600&q=80' },
-  { tag: 'Video', title: 'Chelsea 2-2 Leeds Extended Highlights', time: '9 hours ago', img: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80', video: true },
-  { tag: "Men's Team", title: 'Match gallery: Blues left frustrated by Leeds', time: '7 hours ago', img: 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&q=80' },
-  { tag: "Men's Team", title: 'Chelsea Diary: Cup ties and rivalries resumed', time: '09 Feb 26', img: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80' },
+const allNews = [
+  { featured: true, tag: "Men's", cat: 'mens', title: 'Joao Pedro on Leeds stalemate: "We are very frustrated"', time: 'an hour ago', img: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=80', link: '#' },
+  { tag: "Men's", cat: 'mens', title: 'Match gallery: Blues left frustrated by Leeds', time: '7h ago', img: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80', link: '#' },
+  { tag: "Men's", cat: 'mens', title: 'Rosenior updates on Cucurella and highlights decisions that cost us', time: '9h ago', img: 'https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600&q=80', link: '#' },
+  { tag: "Men's", cat: 'mens', title: 'OTD: Willian nets dramatic late winner against Everton', time: '1h ago', img: 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&q=80', link: '#' },
+  { tag: "Men's", cat: 'mens', title: 'Chelsea Diary: Cup ties and rivalries resumed', time: '09 Feb', img: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80', link: '#' },
+  { tag: 'History', cat: 'mens', title: 'Why are Chelsea and Leeds United rivals?', time: '10 Feb', img: 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600&q=80', link: '#' },
+  { tag: "Women's", cat: 'womens', title: 'Girma proud of how Chelsea stuck together through a tough period', time: '10 Feb', img: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&q=80', link: '#' },
+  { tag: "Women's", cat: 'womens', title: 'Club statement: Paul Green leaves Chelsea', time: '10 Feb', img: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&q=80', link: '#' },
+  { tag: "Women's", cat: 'womens', title: 'Analysis: How Chelsea overcame in-form Tottenham', time: '10 Feb', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80', link: '#' },
+  { tag: "Women's", cat: 'womens', title: 'Erin Cuthbert on reclaiming the Chelsea identity', time: '09 Feb', img: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80', link: '#' },
+  { tag: 'Academy', cat: 'academy', title: 'FA Youth Cup: Chelsea U18 1-4 Man City U18', time: '10 Feb', img: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80', link: '#', video: true },
+  { tag: 'Academy', cat: 'academy', title: 'FA Youth Cup report: Chelsea 1-4 Manchester City', time: '10 Feb', img: 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600&q=80', link: '#' },
+  { tag: 'Academy', cat: 'academy', title: 'PL2 Highlights: Chelsea U21 5-0 Blackburn U21', time: '08 Feb', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80', link: '#', video: true },
 ]
 
 const videoItems = [
-  { title: 'Chelsea vs Leeds Full Match', time: '12 Feb 26', duration: '90:00', img: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&q=80' },
-  { title: 'OTD: Willian nets dramatic late winner against Everton', time: '12 Feb 26', duration: '8:45', img: 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&q=80' },
-  { title: 'Joao Pedro on Leeds stalemate', time: '3 hours ago', duration: '5:12', img: 'https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600&q=80' },
-  { title: 'Chelsea 2-2 Leeds Extended Highlights', time: '9 hours ago', duration: '12:34', img: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80' },
-  { title: 'Rosenior reflects post-Leeds', time: '8 hours ago', duration: '8:22', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80' },
-]
-
-const womensNews = [
-  { tag: "Women's Team", title: 'Girma proud of how Chelsea stuck together through a tough period', time: '10 Feb 26', img: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&q=80' },
-  { tag: "Women's Team", title: 'Club statement: Paul Green leaves Chelsea', time: '10 Feb 26', img: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&q=80' },
-  { tag: "Women's Team", title: 'Analysis: How Chelsea overcame in-form Tottenham', time: '10 Feb 26', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80' },
-  { tag: "Women's Team", title: 'Erin Cuthbert on reclaiming the Chelsea identity', time: '09 Feb 26', img: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80' },
-]
-
-const academyNews = [
-  { tag: 'Academy', title: 'FA Youth Cup: Chelsea U18 1-4 Man City U18', time: '10 Feb 26', img: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80', video: true },
-  { tag: 'Academy', title: 'PL2 Highlights: Chelsea U21 5-0 Blackburn U21', time: '08 Feb 26', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80', video: true },
-  { tag: 'Academy', title: 'REWIND | Chelsea U18 6-2 Man City U18 | FA Youth Cup 16-17', time: '10 Feb 26', img: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&q=80', video: true },
+  { title: 'Chelsea 2-2 Leeds | Extended Highlights', time: '7h ago', duration: '12:34', img: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&q=80' },
+  { title: 'Chelsea 2-2 Leeds | Highlights', time: '8h ago', duration: '5:12', img: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80' },
+  { title: 'Rosenier reflects post-Leeds', time: '8h ago', duration: '8:45', img: 'https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600&q=80' },
+  { title: 'BTS: Tottenham', time: '10 Feb', duration: '15:22', img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80' },
+  { title: 'Top 10 Goals vs Leeds!', time: '10 Feb', duration: '10:30', img: 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&q=80' },
+  { title: 'Memorable moments vs Leeds', time: '10 Feb', duration: '11:15', img: 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600&q=80' },
 ]
 
 const tickets = [
@@ -80,55 +76,21 @@ const tickets = [
   { comp: 'Premier League', title: 'Burnley at home', desc: 'Ticket info for Burnley at Stamford Bridge' },
 ]
 
-// ===== Carousel Component =====
-function HorizontalCarousel({ children, className = '' }) {
-  const ref = useRef(null)
-  const scroll = (dir) => {
-    if (ref.current) ref.current.scrollBy({ left: dir * 340, behavior: 'smooth' })
-  }
-  return (
-    <div className={`carousel-wrap ${className}`}>
-      <div className="carousel-track" ref={ref}>{children}</div>
-      <div className="carousel-arrows">
-        <button className="carousel-arrow" onClick={() => scroll(-1)}><ChevronLeft /></button>
-        <button className="carousel-arrow" onClick={() => scroll(1)}><ChevronRight /></button>
-      </div>
-    </div>
-  )
-}
-
-// ===== Card Components =====
+// ===== SMALL COMPONENTS =====
 function NewsCard({ item }) {
   return (
-    <article className="card">
-      <div className="card-img-wrap">
-        <img src={item.img} alt={item.title} loading="lazy" />
-        {item.video && <div className="card-play"><PlaySmall /></div>}
+    <article className={`news-card ${item.featured ? 'news-featured' : ''}`}>
+      <div className="news-img-wrap">
+        <img src={item.img} alt={item.title} className="news-img" loading="lazy" />
+        {item.featured && <div className="news-img-overlay" />}
+        {item.video && <div className="video-badge"><SmallPlayIcon /> Video</div>}
       </div>
-      <h3 className="card-title">{item.title}</h3>
-      <div className="card-meta">
-        <span className="card-tag">{item.tag}</span>
-        <span className="card-time">{item.time}</span>
+      <div className="news-body">
+        <span className={`news-tag tag-${item.cat || 'default'}`}>{item.tag}</span>
+        <h3 className="news-title">{item.title}</h3>
+        <span className="news-time">{item.time}</span>
       </div>
-    </article>
-  )
-}
-
-function FeaturedCard({ item }) {
-  return (
-    <article className="featured-card">
-      <a href="#" className="featured-link">
-        <div className="featured-img-wrap">
-          <img src={item.img} alt={item.title} loading="lazy" />
-        </div>
-        <div className="featured-text">
-          <h2 className="featured-title">{item.desc || item.title}</h2>
-          <div className="card-meta">
-            <span className="card-tag">{item.tag}</span>
-            <span className="card-time">{item.time}</span>
-          </div>
-        </div>
-      </a>
+      <a href={item.link} className="card-link" target="_blank" rel="noreferrer" aria-label={item.title} />
     </article>
   )
 }
@@ -137,366 +99,378 @@ function MatchCard({ match }) {
   const scores = match.score ? match.score.split('-') : null
   return (
     <div className="match-card">
-      <div className="match-header">
+      <div className="match-meta">
         <span className="match-comp">{match.comp}</span>
         <span className="match-date">{match.date}</span>
       </div>
-      <div className="match-body">
-        <div className="match-team"><img src={match.home.crest} alt={match.home.name} /><span>{match.home.name}</span></div>
-        <div className="match-result">
-          {scores ? <span className="match-score-text">{match.score}</span> : <span className="match-kickoff">{match.time}</span>}
+      <div className="match-teams">
+        <div className="match-team">
+          <img src={match.home.crest} alt={match.home.name} className="team-crest" />
+          <span>{match.home.name}</span>
         </div>
-        <div className="match-team"><img src={match.away.crest} alt={match.away.name} /><span>{match.away.name}</span></div>
+        <div className="match-score">
+          {scores ? (
+            <><span className="score">{scores[0]}</span><span className="score-div">-</span><span className="score">{scores[1]}</span></>
+          ) : (
+            <span className="match-time">{match.time}</span>
+          )}
+        </div>
+        <div className="match-team">
+          <img src={match.away.crest} alt={match.away.name} className="team-crest" />
+          <span>{match.away.name}</span>
+        </div>
       </div>
-      <div className="match-footer">
-        <span className="match-venue"><MapPin /> {match.venue}</span>
-        <span className={`match-badge ${match.status === 'FT' ? 'badge-ft' : 'badge-upcoming'}`}>{match.status}</span>
-      </div>
+      <div className="match-venue"><MapPin /> {match.venue}</div>
+      <span className={`match-status ${match.status === 'FT' ? 'ft' : 'upcoming-badge'}`}>{match.status}</span>
     </div>
   )
 }
 
 function VideoCard({ v }) {
   return (
-    <article className="card">
-      <div className="card-img-wrap video-thumb">
-        <img src={v.img} alt={v.title} loading="lazy" />
-        <div className="card-play"><PlaySmall /></div>
-        <span className="video-dur">{v.duration}</span>
+    <article className="video-card">
+      <div className="video-thumb">
+        <img src={v.img} alt={v.title} className="video-img" loading="lazy" />
+        <div className="video-play"><PlayIcon /></div>
+        <span className="video-duration">{v.duration}</span>
       </div>
-      <h3 className="card-title">{v.title}</h3>
-      <div className="card-meta">
-        <span className="card-tag">Video</span>
-        <span className="card-time">{v.time}</span>
-      </div>
+      <div className="video-info"><h3>{v.title}</h3><span className="video-meta">{v.time}</span></div>
     </article>
   )
 }
 
-// ===== MAIN APP =====
-export default function App() {
-  const [loading, setLoading] = useState(true)
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [searchOpen, setSearchOpen] = useState(false)
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [matchTab, setMatchTab] = useState('mens')
-  const [gameTab, setGameTab] = useState('trivia')
-  const [statsAnimated, setStatsAnimated] = useState(false)
-  const [statValues, setStatValues] = useState(stats.map(() => 0))
-  const heroTimer = useRef(null)
-  const statsRef = useRef(null)
-  const searchRef = useRef(null)
+// ===== TAB VIEWS =====
+function HomeView({ setTab, statValues, statsRef }) {
+  return (
+    <>
+      {/* Quick Stats */}
+      <div className="stats-bar" ref={statsRef}>
+        {stats.map((s, i) => (
+          <div key={i} className="stat-item">
+            <span className="stat-number">{statValues[i]}</span>
+            <span className="stat-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
 
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 1200); return () => clearTimeout(t) }, [])
+      {/* Quick Sections */}
+      <div className="home-grid">
+        {/* Latest Match */}
+        <div className="home-section">
+          <div className="home-section-head">
+            <h3>Latest Result</h3>
+            <button className="link-btn" onClick={() => setTab('matches')}>All Matches <ArrowRight /></button>
+          </div>
+          <MatchCard match={matchesData.mens[0]} />
+        </div>
 
-  // Hero carousel
-  useEffect(() => {
-    heroTimer.current = setInterval(() => setCurrentSlide(s => (s + 1) % heroSlides.length), 5000)
-    return () => clearInterval(heroTimer.current)
-  }, [])
-  const goSlide = useCallback(i => {
-    clearInterval(heroTimer.current)
-    setCurrentSlide(i)
-    heroTimer.current = setInterval(() => setCurrentSlide(s => (s + 1) % heroSlides.length), 5000)
-  }, [])
+        {/* Next Match */}
+        <div className="home-section">
+          <div className="home-section-head">
+            <h3>Next Match</h3>
+          </div>
+          <MatchCard match={matchesData.mens[1]} />
+        </div>
+      </div>
 
-  // Stats
-  useEffect(() => {
-    if (!statsRef.current || statsAnimated) return
-    const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) {
-        setStatsAnimated(true)
-        stats.forEach((s, idx) => {
-          let c = 0; const step = s.count / 40
-          const t = setInterval(() => {
-            c += step
-            if (c >= s.count) { setStatValues(p => { const n = [...p]; n[idx] = s.count; return n }); clearInterval(t) }
-            else { setStatValues(p => { const n = [...p]; n[idx] = Math.floor(c); return n }) }
-          }, 20)
-        })
-      }
-    }, { threshold: 0.3 })
-    obs.observe(statsRef.current)
-    return () => obs.disconnect()
-  }, [statsAnimated])
+      {/* Top News */}
+      <div className="home-section full">
+        <div className="home-section-head">
+          <h3>Top Stories</h3>
+          <button className="link-btn" onClick={() => setTab('news')}>All News <ArrowRight /></button>
+        </div>
+        <div className="news-row">
+          {allNews.slice(0, 4).map((item, i) => <NewsCard key={i} item={item} />)}
+        </div>
+      </div>
 
-  useEffect(() => { if (searchOpen && searchRef.current) searchRef.current.focus() }, [searchOpen])
-  useEffect(() => {
-    const h = e => { if (e.key === 'Escape') { setSearchOpen(false); setMenuOpen(false) } }
-    document.addEventListener('keydown', h); return () => document.removeEventListener('keydown', h)
-  }, [])
+      {/* Featured Videos */}
+      <div className="home-section full">
+        <div className="home-section-head">
+          <h3>Featured Videos</h3>
+          <button className="link-btn" onClick={() => setTab('videos')}>All Videos <ArrowRight /></button>
+        </div>
+        <div className="video-row">
+          {videoItems.slice(0, 3).map((v, i) => <VideoCard key={i} v={v} />)}
+        </div>
+      </div>
 
-  const scrollTo = id => { setMenuOpen(false); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }) }
+      {/* Tickets & Shop */}
+      <div className="home-grid">
+        <div className="home-section">
+          <div className="home-section-head"><h3>Ticket News</h3></div>
+          <div className="ticket-list">
+            {tickets.map((t, i) => (
+              <div key={i} className="ticket-row-item">
+                <div><span className="ticket-comp-sm">{t.comp}</span><span className="ticket-title-sm">{t.title}</span></div>
+                <ArrowRight />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="home-section">
+          <div className="promo-card">
+            <span className="promo-label">Chelsea Store</span>
+            <h3>Hailing the Year of the Horse!</h3>
+            <p>Pre-match top worn by Chelsea players ahead of our games.</p>
+            <a href="https://store.chelseafc.com" target="_blank" rel="noreferrer" className="promo-cta">Shop Now <ExternalIcon /></a>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
 
-  const navItems = [
-    { id: 'news-section', label: 'News' },
-    { id: 'matches-section', label: 'Matches' },
-    { id: 'videos-section', label: 'Videos' },
-    { id: 'womens-section', label: "Women's Team" },
-    { id: 'academy-section', label: 'Academy' },
-    { id: 'games-section', label: 'Fan Games' },
-    { id: 'tickets-section', label: 'Tickets' },
-  ]
+function MatchesView() {
+  const [sub, setSub] = useState('mens')
+  return (
+    <div className="tab-view">
+      <div className="view-head">
+        <h2>Matches</h2>
+        <a href="https://www.chelseafc.com/en/fixtures" target="_blank" rel="noreferrer" className="link-btn">Full Fixtures <ExternalIcon /></a>
+      </div>
+      <div className="sub-tabs">
+        {[['mens',"Men's"],['womens',"Women's"],['u21','U21s']].map(([k,l]) => (
+          <button key={k} className={`sub-tab ${sub === k ? 'active' : ''}`} onClick={() => setSub(k)}>{l}</button>
+        ))}
+      </div>
+      <div className="match-grid">
+        {matchesData[sub]?.map((m, i) => <MatchCard key={i} match={m} />)}
+      </div>
+    </div>
+  )
+}
 
+function NewsView() {
+  const [filter, setFilter] = useState('all')
+  const filtered = filter === 'all' ? allNews : allNews.filter(n => n.cat === filter)
+  return (
+    <div className="tab-view">
+      <div className="view-head">
+        <h2>News</h2>
+        <a href="https://www.chelseafc.com/en/news/latest-news-all" target="_blank" rel="noreferrer" className="link-btn">chelseafc.com <ExternalIcon /></a>
+      </div>
+      <div className="sub-tabs">
+        {[['all','All'],['mens',"Men's"],['womens',"Women's"],['academy','Academy']].map(([k,l]) => (
+          <button key={k} className={`sub-tab ${filter === k ? 'active' : ''}`} onClick={() => setFilter(k)}>{l}</button>
+        ))}
+      </div>
+      <div className="news-grid-clean">
+        {filtered.map((item, i) => <NewsCard key={i} item={item} />)}
+      </div>
+    </div>
+  )
+}
+
+function VideosView() {
+  return (
+    <div className="tab-view">
+      <div className="view-head">
+        <h2>Videos</h2>
+        <a href="https://www.chelseafc.com/en/news/topic?id=6IMpcaedw0EtH8EHOZ13ZW" target="_blank" rel="noreferrer" className="link-btn">All Videos <ExternalIcon /></a>
+      </div>
+      <div className="video-grid-clean">
+        {videoItems.map((v, i) => <VideoCard key={i} v={v} />)}
+      </div>
+    </div>
+  )
+}
+
+function GamesView() {
+  const [game, setGame] = useState('trivia')
   const gameTabs = [
     { id: 'trivia', label: 'Trivia' },
     { id: 'memory', label: 'Memory' },
     { id: 'guess', label: 'Guess Player' },
     { id: 'predict', label: 'Predictor' },
   ]
+  return (
+    <div className="tab-view">
+      <div className="view-head">
+        <h2>Fan Games</h2>
+        <p className="view-subtitle">Test your Chelsea knowledge!</p>
+      </div>
+      <div className="sub-tabs">
+        {gameTabs.map(t => (
+          <button key={t.id} className={`sub-tab ${game === t.id ? 'active' : ''}`} onClick={() => setGame(t.id)}>{t.label}</button>
+        ))}
+      </div>
+      <div className="game-area">
+        {game === 'trivia' && <TriviaGame />}
+        {game === 'memory' && <MemoryGame />}
+        {game === 'guess' && <GuessPlayer />}
+        {game === 'predict' && <ScorePredictor />}
+      </div>
+    </div>
+  )
+}
+
+// ===== MAIN APP =====
+export default function App() {
+  const [loading, setLoading] = useState(true)
+  const [tab, setTab] = useState('home')
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [statsAnimated, setStatsAnimated] = useState(false)
+  const [statValues, setStatValues] = useState(stats.map(() => 0))
+  const heroTimer = useRef(null)
+  const statsRef = useRef(null)
+  const searchRef = useRef(null)
+
+  // Loader
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 1200); return () => clearTimeout(t) }, [])
+
+  // Hero carousel
+  useEffect(() => {
+    heroTimer.current = setInterval(() => setCurrentSlide(s => (s + 1) % heroSlides.length), 6000)
+    return () => clearInterval(heroTimer.current)
+  }, [])
+  const goSlide = useCallback((i) => {
+    clearInterval(heroTimer.current)
+    setCurrentSlide(i)
+    heroTimer.current = setInterval(() => setCurrentSlide(s => (s + 1) % heroSlides.length), 6000)
+  }, [])
+
+  // Stats counter
+  useEffect(() => {
+    if (!statsRef.current || statsAnimated) return
+    const obs = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) {
+        setStatsAnimated(true)
+        stats.forEach((s, idx) => {
+          let cur = 0; const step = s.count / 40
+          const t = setInterval(() => {
+            cur += step
+            if (cur >= s.count) { setStatValues(p => { const n = [...p]; n[idx] = s.count; return n }); clearInterval(t) }
+            else { setStatValues(p => { const n = [...p]; n[idx] = Math.floor(cur); return n }) }
+          }, 20)
+        })
+      }
+    }, { threshold: 0.3 })
+    obs.observe(statsRef.current)
+    return () => obs.disconnect()
+  }, [statsAnimated, tab])
+
+  // Search focus + escape
+  useEffect(() => { if (searchOpen && searchRef.current) searchRef.current.focus() }, [searchOpen])
+  useEffect(() => {
+    const h = e => { if (e.key === 'Escape') { setSearchOpen(false); setMenuOpen(false) } }
+    document.addEventListener('keydown', h); return () => document.removeEventListener('keydown', h)
+  }, [])
+
+  // Scroll to top on tab change
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [tab])
+
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'matches', label: 'Matches' },
+    { id: 'news', label: 'News' },
+    { id: 'videos', label: 'Videos' },
+    { id: 'games', label: 'Games' },
+  ]
+
+  const switchTab = (id) => { setTab(id); setMenuOpen(false) }
 
   return (
     <>
-      {/* Loader */}
-      <div className={`loader ${!loading ? 'hide' : ''}`}>
+      {/* LOADER */}
+      <div className={`loader ${!loading ? 'hidden' : ''}`}>
         <img src={CHELSEA_CREST} alt="Chelsea FC" className="loader-crest" />
         <div className="loader-bar"><div className="loader-fill" /></div>
       </div>
 
-      {/* Navbar - minimal like official site */}
+      {/* NAVBAR */}
       <header className="navbar">
-        <a href="#" className="nav-brand" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
-          <img src={CHELSEA_CREST} alt="Chelsea FC" />
-        </a>
-        <div className="nav-right">
-          <button className="nav-icon" onClick={() => { setSearchOpen(!searchOpen); setMenuOpen(false) }} aria-label="Search"><SearchIcon /></button>
-          <button className="nav-icon" onClick={() => { setMenuOpen(!menuOpen); setSearchOpen(false) }} aria-label="Menu">
-            {menuOpen ? <CloseIcon /> : <MenuIcon />}
+        <div className="nav-inner">
+          <button className="nav-logo" onClick={() => switchTab('home')}>
+            <img src={CHELSEA_CREST} alt="Chelsea FC" className="logo-img" />
+            <span className="logo-text">Chelsea <span className="logo-accent">FC</span></span>
           </button>
+          <nav className={`nav-tabs ${menuOpen ? 'open' : ''}`}>
+            {navItems.map(n => (
+              <button key={n.id} className={`nav-tab ${tab === n.id ? 'active' : ''}`} onClick={() => switchTab(n.id)}>{n.label}</button>
+            ))}
+            <a href="https://store.chelseafc.com" target="_blank" rel="noreferrer" className="nav-tab nav-tab-ext">Shop <ExternalIcon /></a>
+          </nav>
+          <div className="nav-right">
+            <button className="icon-btn" onClick={() => setSearchOpen(!searchOpen)} aria-label="Search"><SearchIcon /></button>
+            <button className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu"><span/><span/><span/></button>
+          </div>
         </div>
+        {searchOpen && (
+          <div className="search-bar">
+            <input ref={searchRef} type="text" placeholder="Search Chelsea FC..." className="search-input" />
+            <button className="icon-btn" onClick={() => setSearchOpen(false)}><CloseIcon /></button>
+          </div>
+        )}
       </header>
 
-      {/* Search overlay */}
-      {searchOpen && (
-        <div className="search-drop">
-          <div className="search-inner">
-            <input ref={searchRef} type="text" placeholder="Search Chelsea FC..." className="search-field" />
-            <button className="search-close" onClick={() => setSearchOpen(false)}><CloseIcon /></button>
-          </div>
-        </div>
-      )}
-
-      {/* Menu Drawer */}
-      <div className={`menu-drawer ${menuOpen ? 'open' : ''}`}>
-        <nav className="drawer-nav">
-          {navItems.map(n => (
-            <button key={n.id} className="drawer-link" onClick={() => scrollTo(n.id)}>{n.label}</button>
-          ))}
-          <a href="https://store.chelseafc.com" target="_blank" rel="noreferrer" className="drawer-link">Shop</a>
-        </nav>
-      </div>
-
-      {/* Hero Carousel */}
+      {/* HERO - compact, always visible */}
       <section className="hero">
-        {heroSlides.map((s, i) => (
-          <div key={i} className={`hero-slide ${i === currentSlide ? 'active' : ''}`}>
-            <img src={s.img} alt={s.title} className="hero-img" />
-            <div className="hero-gradient" />
-            <div className="hero-text">
-              <h1>{s.title}</h1>
-            </div>
-          </div>
-        ))}
-        <div className="hero-dots">
-          {heroSlides.map((_, i) => (
-            <button key={i} className={`hero-dot ${i === currentSlide ? 'active' : ''}`} onClick={() => goSlide(i)} />
-          ))}
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <main>
-        {/* Featured Story + News */}
-        <section id="news-section" className="section section-white">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Chelsea vs Leeds United <ArrowRight /></h2>
-            </div>
-            {newsItems[0] && <FeaturedCard item={newsItems[0]} />}
-            <HorizontalCarousel>
-              {newsItems.slice(1).map((item, i) => <NewsCard key={i} item={item} />)}
-            </HorizontalCarousel>
-          </div>
-        </section>
-
-        {/* Latest Videos */}
-        <section className="section section-white">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Latest Videos <ArrowRight /></h2>
-            </div>
-            <HorizontalCarousel>
-              {videoItems.map((v, i) => <VideoCard key={i} v={v} />)}
-            </HorizontalCarousel>
-          </div>
-        </section>
-
-        {/* Shop Promo */}
-        <section className="section section-promo">
-          <div className="container">
-            <div className="promo-banner">
-              <div className="promo-content">
-                <h2>Hailing the Year of the Horse!</h2>
-                <p>Celebrate the lunar calendar with the pre-match top worn by Chelsea players ahead of our games.</p>
-                <a href="https://store.chelseafc.com" target="_blank" rel="noreferrer" className="btn-primary">Shop Now</a>
+        <div className="hero-carousel">
+          {heroSlides.map((s, i) => (
+            <div key={i} className={`hero-slide ${i === currentSlide ? 'active' : ''}`}>
+              <div className="hero-bg" style={{ backgroundImage: `url(${s.img})` }} />
+              <div className="hero-overlay" />
+              <div className="hero-content">
+                <span className="hero-tag">{s.tag}</span>
+                <h1>{s.title}</h1>
+                <p>{s.desc}</p>
+                {s.internal ? (
+                  <button className="hero-cta" onClick={() => switchTab('games')}>Play Now</button>
+                ) : (
+                  <a href={s.link} className="hero-cta" target="_blank" rel="noreferrer">Read More</a>
+                )}
               </div>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+        <div className="hero-dots">
+          {heroSlides.map((_, i) => (
+            <button key={i} className={`dot ${i === currentSlide ? 'active' : ''}`} onClick={() => goSlide(i)} />
+          ))}
+        </div>
+        <button className="hero-arr hero-arr-l" onClick={() => goSlide((currentSlide - 1 + heroSlides.length) % heroSlides.length)}><ChevronLeft /></button>
+        <button className="hero-arr hero-arr-r" onClick={() => goSlide((currentSlide + 1) % heroSlides.length)}><ChevronRight /></button>
+      </section>
 
-        {/* Match Center */}
-        <section id="matches-section" className="section section-white">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Match Centre <ArrowRight /></h2>
-            </div>
-            <div className="tab-pills">
-              {[['mens',"Men's"],['womens',"Women's"],['u21','U21s']].map(([k,l]) => (
-                <button key={k} className={`pill ${matchTab === k ? 'active' : ''}`} onClick={() => setMatchTab(k)}>{l}</button>
-              ))}
-            </div>
-            <div className="match-grid">
-              {matchesData[matchTab]?.map((m, i) => <MatchCard key={i} match={m} />)}
-            </div>
-          </div>
-        </section>
-
-        {/* Women's Team News */}
-        <section id="womens-section" className="section section-gray">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Women&apos;s Team News <ArrowRight /></h2>
-            </div>
-            <HorizontalCarousel>
-              {womensNews.map((item, i) => <NewsCard key={i} item={item} />)}
-            </HorizontalCarousel>
-          </div>
-        </section>
-
-        {/* Women's Team Videos */}
-        <section id="videos-section" className="section section-gray">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Women&apos;s Team Videos <ArrowRight /></h2>
-            </div>
-            <HorizontalCarousel>
-              {videoItems.slice(0, 3).map((v, i) => <VideoCard key={i} v={v} />)}
-            </HorizontalCarousel>
-          </div>
-        </section>
-
-        {/* Academy */}
-        <section id="academy-section" className="section section-white">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Academy <ArrowRight /></h2>
-            </div>
-            <HorizontalCarousel>
-              {academyNews.map((item, i) => <NewsCard key={i} item={item} />)}
-            </HorizontalCarousel>
-          </div>
-        </section>
-
-        {/* Stats */}
-        <section className="stats-section" ref={statsRef}>
-          <div className="container">
-            <div className="stats-row">
-              {stats.map((s, i) => (
-                <div key={i} className="stat">
-                  <span className="stat-num">{statValues[i]}</span>
-                  <span className="stat-lbl">{s.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Fan Games */}
-        <section id="games-section" className="section section-white">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Fan Games Zone</h2>
-              <p className="section-sub">Test your Chelsea knowledge!</p>
-            </div>
-            <div className="tab-pills">
-              {gameTabs.map(t => (
-                <button key={t.id} className={`pill ${gameTab === t.id ? 'active' : ''}`} onClick={() => setGameTab(t.id)}>{t.label}</button>
-              ))}
-            </div>
-            <div className="game-area">
-              {gameTab === 'trivia' && <TriviaGame />}
-              {gameTab === 'memory' && <MemoryGame />}
-              {gameTab === 'guess' && <GuessPlayer />}
-              {gameTab === 'predict' && <ScorePredictor />}
-            </div>
-          </div>
-        </section>
-
-        {/* Tickets */}
-        <section id="tickets-section" className="section section-gray">
-          <div className="container">
-            <div className="section-head">
-              <h2 className="section-title">Tickets <ArrowRight /></h2>
-            </div>
-            <div className="ticket-grid">
-              {tickets.map((t, i) => (
-                <div key={i} className="ticket-card">
-                  <span className="ticket-comp">{t.comp}</span>
-                  <h3>{t.title}</h3>
-                  <p>{t.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Partners */}
-        <section className="section section-white partners">
-          <div className="container">
-            <p className="partners-label">Principal Partners</p>
-            <div className="partners-row">
-              {[['Nike','https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg'],['FPT',''],['BingX','']].map(([n,logo]) => (
-                <div key={n} className="partner">{logo ? <img src={logo} alt={n} /> : <span>{n}</span>}</div>
-              ))}
-            </div>
-            <p className="partners-label">Official Partners</p>
-            <div className="partners-row small">
-              {['EA Sports','MSC Cruises','Carling','Rexona','Pegasus','Predator'].map(n => (
-                <div key={n} className="partner"><span>{n}</span></div>
-              ))}
-            </div>
-          </div>
-        </section>
+      {/* MAIN CONTENT AREA */}
+      <main className="content">
+        <div className="container">
+          {tab === 'home' && <HomeView setTab={switchTab} statValues={statValues} statsRef={statsRef} />}
+          {tab === 'matches' && <MatchesView />}
+          {tab === 'news' && <NewsView />}
+          {tab === 'videos' && <VideosView />}
+          {tab === 'games' && <GamesView />}
+        </div>
       </main>
 
-      {/* Footer - Deep Chelsea blue */}
+      {/* FOOTER - compact */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-top">
-            <img src={CHELSEA_CREST} alt="Chelsea FC" className="footer-crest" />
-            <div className="footer-info">
-              <strong>Chelsea Football Club</strong>
-              <p>Stamford Bridge<br />Fulham Road<br />London<br />SW6 1HS</p>
+          <div className="footer-inner">
+            <div className="footer-brand">
+              <img src={CHELSEA_CREST} alt="Chelsea FC" className="footer-crest" />
+              <div>
+                <strong>Chelsea Football Club</strong>
+                <span>Stamford Bridge, London SW6 1HS</span>
+              </div>
             </div>
-          </div>
-          <div className="footer-social">
-            {[['Facebook','https://www.facebook.com/ChelseaFC/','FB'],['Instagram','https://www.instagram.com/chelseafc/','IG'],['YouTube','https://www.youtube.com/chelseafc','YT'],['X','https://x.com/chelseafc','X'],['TikTok','https://www.tiktok.com/@chelseafc','TT']].map(([name,url,label]) => (
-              <a key={name} href={url} target="_blank" rel="noreferrer" className="social-link" aria-label={name}>
-                <span>{label}</span>
-              </a>
-            ))}
-          </div>
-          <hr className="footer-divider" />
-          <div className="footer-links">
-            {['About The Club','Contact Us & FAQs','Careers','The Shed','Official Store'].map(l => (
-              <a key={l} href="#" className="footer-link">{l}</a>
-            ))}
+            <div className="footer-links">
+              {[['About','https://www.chelseafc.com/en/about-the-club'],['Contact','https://www.chelseafc.com/en/contact-us'],['Careers','https://www.chelseafc.com/en/careers'],['The Shed','https://theshed.chelseafc.com/bridge/']].map(([l,u]) => (
+                <a key={l} href={u} target="_blank" rel="noreferrer">{l}</a>
+              ))}
+            </div>
+            <div className="footer-social">
+              {[['FB','https://www.facebook.com/ChelseaFC/'],['IG','https://www.instagram.com/chelseafc/'],['YT','https://www.youtube.com/chelseafc'],['X','https://x.com/chelseafc'],['TT','https://www.tiktok.com/@chelseafc']].map(([l,u]) => (
+                <a key={l} href={u} target="_blank" rel="noreferrer" className="social-pill">{l}</a>
+              ))}
+            </div>
           </div>
           <div className="footer-bottom">
             <div className="footer-legal">
-              {['Privacy Policy','Cookies Policy','Terms & Conditions','Modern Slavery Act'].map(l => (
-                <a key={l} href="#">{l}</a>
-              ))}
+              {['Privacy Policy','Cookies Policy','Terms & Conditions'].map(l => <a key={l} href="#">{l}</a>)}
             </div>
             <p>&copy; 2026 Chelsea FC Fan Hub. Fan experience project.</p>
           </div>
