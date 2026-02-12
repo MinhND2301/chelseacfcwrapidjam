@@ -460,6 +460,420 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .footer-legal a:hover { color: var(--text-2); }
 .footer-bottom p { font-size: 0.62rem; color: var(--text-3); }
 
+/* ---------- Player Cards ---------- */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.player-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--ease);
+}
+.player-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  border-color: rgba(3, 70, 148, 0.25);
+}
+
+.player-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 3px solid var(--blue);
+  background: linear-gradient(135deg, rgba(3, 70, 148, 0.08) 0%, transparent 100%);
+}
+
+.player-number {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  min-width: 40px;
+}
+
+.player-pos-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.player-card-body {
+  padding: 14px 16px 18px;
+}
+
+.player-name {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.player-nation {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-2);
+  margin-bottom: 8px;
+}
+
+.player-bio {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Matchday Sections ---------- */
+.matchday-section {
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+.section-title svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.section-desc {
+  color: var(--text-2);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  margin-top: -8px;
+}
+
+.matchday-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--ease);
+  margin-top: 16px;
+}
+.matchday-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(3, 70, 148, 0.4);
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.info-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: var(--ease);
+}
+.info-card:hover {
+  border-color: rgba(3, 70, 148, 0.2);
+}
+.info-card h4 {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+.info-card p {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.info-card p strong {
+  color: var(--text);
+}
+
+/* What to Expect */
+.expect-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.expect-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: var(--ease);
+}
+.expect-item:hover {
+  border-color: rgba(3, 70, 148, 0.2);
+}
+.expect-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+.expect-item strong {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.expect-item p {
+  font-size: 0.78rem;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Chants Grid */
+.chants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.chant-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: var(--ease);
+}
+.chant-card:hover {
+  border-color: rgba(212, 168, 67, 0.3);
+}
+.chant-card.classic {
+  border-left: 3px solid var(--gold);
+}
+.chant-name {
+  font-family: var(--font-head);
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chant-badge {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background: rgba(212, 168, 67, 0.15);
+  color: var(--gold);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.chant-lyrics {
+  font-size: 0.78rem;
+  color: var(--text-2);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ---------- About Sections ---------- */
+.about-section {
+  margin-bottom: 36px;
+}
+
+/* Honours */
+.honours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.honour-card {
+  background: linear-gradient(135deg, rgba(3, 70, 148, 0.12) 0%, rgba(212, 168, 67, 0.06) 100%);
+  border: 1px solid rgba(212, 168, 67, 0.15);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: var(--ease);
+}
+.honour-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 168, 67, 0.35);
+  box-shadow: 0 4px 20px rgba(212, 168, 67, 0.1);
+}
+
+.honour-count {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.honour-trophy {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.honour-years {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--text-3);
+  line-height: 1.5;
+}
+
+/* History Content */
+.history-content {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.history-content p {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.history-content p:last-child {
+  margin-bottom: 0;
+}
+.history-content strong {
+  color: var(--text);
+}
+
+/* Timeline Grid */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.timeline-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--border);
+  transition: var(--ease);
+}
+.timeline-card.active::before {
+  background: var(--gold);
+}
+.timeline-card.active {
+  border-color: rgba(212, 168, 67, 0.2);
+}
+.timeline-card:hover {
+  border-color: rgba(3, 70, 148, 0.2);
+  transform: translateY(-2px);
+}
+
+.timeline-era {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.timeline-card h4 {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.timeline-card p {
+  font-size: 0.78rem;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.timeline-card p strong {
+  color: var(--text);
+}
+
+/* Songs List */
+.songs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.song-item {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: var(--ease);
+}
+.song-item:hover {
+  border-color: rgba(3, 70, 148, 0.2);
+}
+.song-item strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.song-item p {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* ---------- Scrollbar ---------- */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -506,6 +920,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   /* View head */
   .view-head h2 { font-size: 1.3rem; }
+
+  /* New components — tablet */
+  .player-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .info-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .honours-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .timeline-grid { grid-template-columns: 1fr; gap: 12px; }
+  .chants-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .matchday-section { margin-bottom: 28px; }
+  .about-section { margin-bottom: 28px; }
+  .section-title { font-size: 1.05rem; }
+  .history-content { padding: 18px; }
 
   /* Footer stacked */
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
@@ -612,6 +1037,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .promo-card { padding: 18px; }
   .promo-card h3 { font-size: 1rem; }
   .promo-card p { font-size: 0.72rem; }
+
+  /* New components — phone */
+  .player-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .player-number { font-size: 1.6rem; }
+  .player-name { font-size: 0.88rem; }
+  .player-bio { font-size: 0.72rem; -webkit-line-clamp: 2; }
+  .player-card-body { padding: 10px 12px 14px; }
+  .player-card-top { padding: 12px 12px 10px; }
+  .info-grid { grid-template-columns: 1fr; }
+  .honours-grid { grid-template-columns: repeat(2, 1fr); }
+  .honour-count { font-size: 2rem; }
+  .honour-trophy { font-size: 0.75rem; }
+  .timeline-grid { grid-template-columns: 1fr; }
+  .chants-grid { grid-template-columns: 1fr; }
+  .matchday-section { margin-bottom: 24px; }
+  .about-section { margin-bottom: 24px; }
+  .section-title { font-size: 0.95rem; }
+  .history-content { padding: 14px; }
+  .history-content p { font-size: 0.82rem; }
+  .matchday-cta { padding: 10px 20px; font-size: 0.75rem; width: 100%; justify-content: center; }
+  .expect-item { padding: 12px; gap: 10px; }
+  .expect-icon { font-size: 1.2rem; }
 
   /* Footer */
   .footer { padding: 20px 0 14px; }
