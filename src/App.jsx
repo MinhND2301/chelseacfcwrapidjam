@@ -3,6 +3,7 @@ import TriviaGame from './components/TriviaGame'
 import MemoryGame from './components/MemoryGame'
 import GuessPlayer from './components/GuessPlayer'
 import ScorePredictor from './components/ScorePredictor'
+import TicketChatbot from './components/TicketChatbot'
 
 const CHELSEA_CREST = 'https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg'
 
@@ -314,6 +315,7 @@ export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [statsAnimated, setStatsAnimated] = useState(false)
   const [statValues, setStatValues] = useState(stats.map(() => 0))
+  const [chatOpen, setChatOpen] = useState(false)
   const heroTimer = useRef(null)
   const statsRef = useRef(null)
   const searchRef = useRef(null)
@@ -493,6 +495,15 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* TICKET CHATBOT */}
+      <TicketChatbot isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+      {!chatOpen && (
+        <button className="chatbot-fab" onClick={() => setChatOpen(true)} aria-label="Open Ticket Chat">
+          <TicketIcon />
+          <span className="fab-label">Tickets</span>
+        </button>
+      )}
     </>
   )
 }
