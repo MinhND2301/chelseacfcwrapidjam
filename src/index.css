@@ -741,17 +741,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   30% { transform: translateY(-6px); opacity: 1; }
 }
 
-/* Quick Actions */
-.chatbot-quick-actions {
-  display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 12px;
+/* Suggestions — always visible after bot answers */
+.chatbot-suggestions {
+  display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 16px 10px;
+  border-top: 1px solid var(--border); flex-shrink: 0;
+  max-height: 90px; overflow-y: auto; scrollbar-width: none;
 }
-.quick-action-btn {
+.chatbot-suggestions::-webkit-scrollbar { display: none; }
+.suggestion-btn {
   padding: 6px 14px; background: rgba(3, 70, 148, 0.12);
   border: 1px solid rgba(3, 70, 148, 0.25); border-radius: 20px;
   font-size: 0.72rem; font-weight: 600; color: var(--blue-light);
-  transition: var(--ease); white-space: nowrap;
+  transition: var(--ease); white-space: nowrap; cursor: pointer;
 }
-.quick-action-btn:hover { background: rgba(3, 70, 148, 0.25); color: var(--text); border-color: var(--blue); }
+.suggestion-btn:hover { background: rgba(3, 70, 148, 0.25); color: var(--text); border-color: var(--blue); }
+
+/* QR Code in chat */
+.chat-qr {
+  margin-top: 10px; background: #fff; border-radius: 12px;
+  padding: 16px; text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: 8px;
+}
+.qr-image { width: 180px; height: 180px; border-radius: 8px; }
+.qr-caption { font-size: 0.68rem; color: #333; font-weight: 600; }
 
 /* Input Area */
 .chatbot-input-area {
